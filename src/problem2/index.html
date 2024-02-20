@@ -1,0 +1,63 @@
+<html>
+
+<head>
+  <title>Fancy Form</title>
+  <link href="style.css" rel="stylesheet" />
+</head>
+
+<body onload="startup()">
+  <div id="main">
+    <form id="main-form">
+      <h5 class="head">Swap</h5>
+        <div id="main-section">
+          <label for="input-currency">From</label>
+          <input id="input-currency" />
+          <select id="input-select">
+            <option value="BCN">
+              <img src="BCN.svg" alt="BCN" width="20" height="20">BCN
+            </option>
+            <option value="ADA">
+              <img src="ADA.svg" alt="ADA" width="20" height="20">ADA
+            </option>
+            <option value="ELA">
+              <img src="ELA.svg" alt="ELA" width="20" height="20">ELA
+            </option>
+          </select>
+          
+          <label for="output-currency">To</label>
+          <input id="output-currency" />
+          <select id="output-select">
+            <option value="BCN">
+              <img src="BCN.svg" alt="BCN" width="20" height="20">BCN
+            </option>
+            <option value="ADA">
+              <img src="ADA.svg" alt="ADA" width="20" height="20">ADA
+            </option>
+            <option value="ELA">
+              <img src="ELA.svg" alt="ELA" width="20" height="20">ELA
+            </option>
+          </select>
+          
+          <button onclick = "swap()">CONFIRM SWAP</button>
+        </div>
+      <div id="record" >
+        <h5 class="head">Transaction record</h5>
+        <table>
+          <thead>
+            <tr>
+              <th>Input</th>
+              <th>Ourput</th>
+            </tr>
+          </thead>
+          <tbody id="transactions-table-body">
+          </tbody>
+        </table>
+        <button onclick = "clearAll()">CLEAR ALL RECORDS</button>
+      </div>
+    </form>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+
+</html>
